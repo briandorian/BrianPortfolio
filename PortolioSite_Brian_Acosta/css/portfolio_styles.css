@@ -1,81 +1,201 @@
 body, html {
-  margin: 0;
+  margin-left: 1em;
+  margin-right: 1em;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  align-content: center;
+}
+
+h1,h2,h3{
+  color: rgb(45,60,73);
+}
+/*We make sure that the links in the paragrpahs will always be clickable"*/
+p{
+  min-width: 42px;
+  min-height: 42px;
 }
 
 body {
   font-family: Roboto;
-  font-size: 16px;
-  color: #424242;
+  font-size: 18px;
 }
 
-
+a {
+    color: rgb(45,60,73);
+    text-decoration: none;
+    font-weight: lighter;
+}
 /*Header's block css*/
 .header{
   width:100%;
-  display: inline-flex;
-  margin-right: auto;
-  margin-left: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 /* Header picture acting as logo styles */
 
 .devs_picture{
-  position:relative;
-  width:25%;
-  height:150px;
-  display: flex;
-  order:0;
-  text-indent: -99999px;
+/*  height:175px;*/
+  width: 160px;
 }
 
 .myData{
-  float:right;
-  width:25%;
-  margin-left: 50%;
+  margin-left: 60%;
+  width: 100%;
+  margin-right:auto;
+}
+/* Table CSS*/
+.featured_block {
+  text-align: center;
+  padding: 0.25em;
+  display: flex;
+  width: 33.3%;
+  /*height: 150px;*/
+  flex-direction: column;
+  word-break: break-word
+}
+.link_featured_titles{
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .featured_work_table{
-  width:100%;
-  margin-left:auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .main_image_container{
   display: flex;
-  width: 800px;
   width:100%;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 /* Images */
 
 .img_featured{
-  widht:33.33%;
-  height:1.5em;
+  /*height: 200px;*/
   display: flex;
+  width: 100%;
+  margin: 0 auto;
 }
 .featured_work_title{
   align-items: center;
   margin-left: 40%;
   margin-right: 40%;
 }
+.separator{
+  color: rgb(125,151,173);
+  width:100%;
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
 
+.coding_image{
+  display: flex;
+  /*height: 500px;*/
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 /*Media Queries*/
 
-@media screen and (max-width:420px){
-  .devs_picture{
-    width: 50%;
-    margin-left: auto;
+@media screen and (min-width: 1200px){
+  body{
+    width: 1200px;
+    align-content: center;
+    margin-left:  auto;
     margin-right: auto;
   }
-  @media screen and (min-width:810px){
-    .body{
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-    }
+}
+
+/*SMALL VIEWPORTS*/
+/*IPAD 768*1024*/
+
+@media screen and (min-width: 646px) and (max-width: 1200px){
+  .devs_picture{
+    width: 20%;
+  /*  margin-right: 10%;*/
+  }
+
+  .myData{
+    width: 100%;
+    margin-left: 25%;
+    margin-right: auto;
+  }
+
+}
+
+@media screen and (min-width: 421px) and (max-width: 645px){
+
+  body, html {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+  }
+
+  .devs_picture{
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 50%;
+  }
+  .myData{
+    width: 100%;
+    margin-left: 30%;
+    margin-right: 60%;
+  }
+  .header{
+    flex-direction: column;
+  }
+  .main_image_container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/* PHONES/PHABLETS*/
+@media screen and (max-width: 420px){
+  body, html {
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+  }
+
+  .featured_work_table{
+    flex-direction: column;
+    width: 100%;
+    margin-left: 30%;
+    margin-right: auto;
+  }
+
+  .featured_block{
+    flex-direction: column;
+  }
+  .main_image_container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .devs_picture{
+    width: 30%;
+    margin-left: 40%;
+    margin-right: 30%;
+    border-radius: 50%;
+  }
+
+  .myData{
+    width: 100%;
+    margin-left: 30%;
+    margin-right: auto;
+  }
+
+  .header{
+    width:100%;
+    flex-direction: column;
+  }
 }
