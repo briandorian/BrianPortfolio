@@ -1,81 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Brian Acosta Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/portfolio_styles.css">
-  </head>
-  <body>
-    <header class="header">
-      <img class="devs_picture" src="img/devs_picture.png" alt="the picture of a wonderful web developer among other things">
-        <section class="myData">
-          <h1 class="name"> Brian Acosta</h1>
-          <h2 class="title"> Web developer</h2>
-          <h3 class="contact_details"> bacosta70@gmail.com</h3>
+
+<head>
+  <title>Brian Acosta Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/portfolio_styles.css">
+</head>
+
+<body>
+  <!-- 
+    Commented code is useless when you go live as it brings nothing for the user but it's downloaded anyway (same apllies 
+    for CSS). THis is no big deal when you have a single portfolio page but if you work on a corporate site this can mean in a 
+    month several useless provided and download MB
+   -->
+  <header>
+    <!-- 
+      If you have your images prepared in advanced and the original dimensions of it are the ones that would be rendered
+      in the browser (i.e. you won't be applying and & rule to it) you can set the width and height in the html in order
+      to make the browser know in advance the size of it so it can prepare the layout as image loading is asynchronous
+
+     -->
+    <img class="devs_picture" src="img/devs_picture.png" alt="the picture of a wonderful web developer among other things">
+
+    <!-- This is more an <aside> than a zsection> semantically -->
+    <section class="myData">
+      <!-- 
+        Empty space at the beginning of the content of a tag is not recommended as space is a character and the
+        spacing in picels may change when using one fotn or the other. It's not consistent so margin or padding 
+        should be used instead
+      -->
+      <h1 class="name">Brian Acosta</h1>
+      <h2 class="title">Web developer</h2>
+      <h3 class="contact_details"><a href="mailto:bacosta70@gmail.com">bacosta70@gmail.com</a></h3>
     </section>
   </header>
-    <hr class="separator">
-  <article class="main_image_container">
-    <img class="coding_image main_image" src="img/coding_image.png" alt="Image of web programmers code">
-  </article>
 
-<!-- That would have been using a table, but I didn't use it because CSS were trickier with thables rather than divs but I leave the code
-here as doesn't harm and who knows if in the future  I want to use tables.
+  <!-- 
+    <hr> and <br> are considered bad practices as both bring elements taht can be achieved by maring, padding or border 
+    these tags should be avioided as much as possible because they don't bring semantic meaning but styling 
+  -->
+  <hr class="separator">
 
-<table class="featured_work_table">
-      <td class="featured_block1">
-      <td><img class="idea_image img_featured" src="img/idea.png" alt="A lightbulb shown shining as looking for an idea">
-      <div class="first_link_info link_texts">
-        <h2 class="link1_title">Idea missing</h2>
-        <h3><a href="http://lmgtfy.com/?q=idea">Let me google idea for you </a></h3>
-      </div></td>
-    </td>
-    <td class="featured_block2">
-      <td><img class="crossfit_facta_picture img_featured" src="img/facta_non_verba_image.png" alt="Logo of Crossfit Box">
-      <div class="second_link_info link_texts">
-        <h2 class="link2_title">Crossfit Box Handler</h2>
-        <h3><a href="http://www.crossfitfactanonverba.com/">Link to the box's website</a></h3>
-      </div></td>
-    </td>
-    <td class="featured_block3">
-      <td><img class="ruby_logo img_featured" src="img/ruby_logo.png
-    " alt="Logo of ruby development language">
-      <div class="third_link_info link_texts">
-        <h2 class="link3_title">BDD-Capybara course</h2>
-        <h3><a href="https://github.com/briandorian/bdd_course_rails5">https://github.com/briandorian/bdd_course_rails5</a></h3>
-      </div></td>
-   </td>
- </table>
--->
-<footer  class="featured_work">
-    <h2 class="featured_work_title"> Featured Work </h2>
-<div class="featured_work_table">
-    <div class="featured_block">
-      <img class="idea_image img_featured" src="img/idea.png" alt="A lightbulb shown shining as looking for an idea">
-      <div class="first_link_info link_texts">
-        <h2 class="link1_title link_featured_titles">Idea missing</h2>
-        <!--<h3><a href="http://lmgtfy.com/?q=idea">Let me google idea for you </a></h3>-->
-        <p class="first_featured_link"><a href="http://lmgtfy.com/?q=idea">Let me google idea for you </a></p>
+  <!-- 
+    Personal preference: web pages have ussually a layout consisting on <header> - <main> - <footer>. 
+    <article>s and <section>s belong inside <main>
+   -->
+  <main>
+    <article class="main_image_container">
+      <img class="coding_image main_image" src="img/coding_image.png" alt="Image of web programmers code">
+    </article>
+  </main>
+
+  <footer class="featured_work">
+    <h2 class="featured_work_title">Featured Work </h2>
+    <div class="featured_work_table">
+      <div class="featured_block">
+        <img class="idea_image img_featured" src="img/idea.png" alt="A lightbulb shown shining as looking for an idea">
+        <div class="first_link_info link_texts">
+          <h2 class="link1_title link_featured_titles">Idea missing</h2>
+          <p class="first_featured_link"><a href="http://lmgtfy.com/?q=idea">Let me google idea for you</a></p>
+        </div>
+      </div>
+      <div class="featured_block">
+        <img class="crossfit_facta_picture img_featured" src="img/facta_non_verba_image.png" alt="Logo of Crossfit Box">
+        <div class="second_link_info link_texts">
+          <h2 class="link2_title link_featured_titles">Crossfit Box Handler</h2>
+          <p class="second_featured_link"><a href="http://www.crossfitfactanonverba.com/">Link to the box's website</a></p>
+        </div>
+      </div>
+      <div class="featured_block">
+        <img class="ruby_logo img_featured" src="img/ruby_logo.png" alt="Logo of ruby development language">
+        <div class="third_link_info link_texts">
+          <h2 class="link3_title">BDD-Capybara course</h2>
+          <p class="third_featured_link"><a href="https://github.com/briandorian/bdd_course_rails5">https://github.com/briandorian/bdd_course_rails5</a></p>
+        </div>
       </div>
     </div>
-    <div class="featured_block">
-      <img class="crossfit_facta_picture img_featured" src="img/facta_non_verba_image.png" alt="Logo of Crossfit Box">
-      <div class="second_link_info link_texts">
-        <h2 class="link2_title link_featured_titles">Crossfit Box Handler</h2>
-        <!--<h3><a href="http://www.crossfitfactanonverba.com/">Link to the box's website</a></h3>-->
-        <p class="second_featured_link"><a href="http://www.crossfitfactanonverba.com/">Link to the box's website</a></p>
-      </div>
-    </div>
-    <div class="featured_block">
-      <img class="ruby_logo img_featured" src="img/ruby_logo.png" alt="Logo of ruby development language">
-      <div class="third_link_info link_texts">
-        <h2 class="link3_title">BDD-Capybara course</h2>
-<!--   <h3><a href="https://github.com/briandorian/bdd_course_rails5">https://github.com/briandorian/bdd_course_rails5</a></h3>-->
-        <p class="third_featured_link"><a href="https://github.com/briandorian/bdd_course_rails5">https://github.com/briandorian/bdd_course_rails5</a></p>
-      </div>
-   </div>
- </div>
-</footer>
-  </body>
+  </footer>
+</body>
+
 </html>
